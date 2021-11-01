@@ -1,0 +1,27 @@
+.kpi-result {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #43436b;
+  margin: 0 8px;
+}
+
+.kpi-title {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: .02em;
+  color: #a1a1b5;
+  margin: 0 -8px;
+}
+
+.mat-card-header-text {
+  margin: 0 16px;
+}
+
+.dashboard-card {
+    box-shadow: none;
+    height: 131px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 2rem;
+}

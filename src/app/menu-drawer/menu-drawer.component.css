@@ -1,0 +1,38 @@
+.container {
+  margin: 1rem;
+}
+
+mat-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.user-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: .01em;
+  color: #43436b;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+}
+
+.user-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: #a1a1b5;
+}
+
+.mat-line {
+  color: #7A77FF;
+}

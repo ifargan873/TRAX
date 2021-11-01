@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+  padding: 20px;
+}
+
+.table-list {
+  margin: 2rem;
+  background-color: #fff;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.cubes {
+  margin-top: 2rem;
+}
