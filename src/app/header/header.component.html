@@ -18,7 +18,7 @@
   <button mat-icon-button>
     <mat-icon>share</mat-icon>
   </button>
-  <button mat-icon-button (click)="home()">
+  <button mat-icon-button *ngIf="!userAuthenticated" (click)="home()">
       <mat-icon>home</mat-icon>
   </button>
 </mat-toolbar>
