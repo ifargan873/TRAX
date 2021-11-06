@@ -1,0 +1,13 @@
+.mat-drawer-container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+#button-add-user {
+  margin-right: 28px;
+}
+
+button {
+  margin: 10px;
+}

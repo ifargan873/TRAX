@@ -1,1 +1,35 @@
-<p>users-create works!</p>
+<div class="container">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+  <form [formGroup]="form" (submit)="onSignup()" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput type="text" formControlName="first_name" placeholder="First Name">
+      <mat-error *ngIf="form.get('first_name').invalid">Please enter a valid name</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="last_name" placeholder="Last Name">
+      <mat-error *ngIf="form.get('last_name').invalid">Please enter a valid full last name</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="phone" placeholder="Phone Number">
+      <mat-error *ngIf="form.get('phone').invalid">Please enter a valid phone number.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="email" formControlName="email" placeholder="E-Mail">
+      <mat-error *ngIf="form.get('email').invalid">Please enter a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" formControlName="password" placeholder="Password">
+      <mat-error *ngIf="form.get('password').invalid">Please enter a valid password.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" formControlName="confirmPassword" placeholder="Confirm Password"/>
+      <mat-error *ngIf="form.get('confirmPassword').dirty && form.get('confirmPassword').errors?.noMatch">
+         <strong>Password</strong> and <strong>Confirm Password</strong> must be same
+      </mat-error>
+   </mat-form-field>
+   <div dir="rtl">
+     <button mat-raised-button color="accent" type="submit">New User</button>
+   </div>
+  </form>
+</div>

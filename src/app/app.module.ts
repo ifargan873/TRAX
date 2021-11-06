@@ -19,7 +19,9 @@ import { MatButtonModule,
   MatNativeDateModule,
   MatCardModule,
   MatMenuModule,
-  MatPaginatorIntl} from '@angular/material';
+  MatPaginatorIntl,
+  MatDialogModule,
+  MatTooltipModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +39,9 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { LoginComponent } from './auth/login/login.component';
 import { CustomPaginator } from './tasks-list/CustomPaginator';
+import { UsersEditComponent } from './users/users-edit/users-edit.component';
+import { UsersMainComponent } from './users/users-main/users-main.component';
+import { SidenavService } from './users/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +56,9 @@ import { CustomPaginator } from './tasks-list/CustomPaginator';
     UsersCreateComponent,
     UsersTableComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    UsersEditComponent,
+    UsersMainComponent
   ],
   imports: [
     BrowserModule,
@@ -77,9 +84,12 @@ import { CustomPaginator } from './tasks-list/CustomPaginator';
     MatNativeDateModule,
     MatCardModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatTooltipModule
   ],
   providers: [
+    UsersCreateComponent, SidenavService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: MatPaginatorIntl, useValue: CustomPaginator() }
   ],

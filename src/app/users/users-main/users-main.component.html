@@ -1,0 +1,24 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav fixedInViewport="true">
+    <div dir="rtl">
+      <button mat-icon-button
+        matTooltip="Cancel"
+        (click)="sidenav.toggle()">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+    <app-users-create></app-users-create>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div dir="rtl">
+      <button mat-stroked-button
+        id="button-add-user"
+        matTooltip="Create a new user"
+        (click)="sidenav.toggle()">
+        <mat-icon>person_add_alt</mat-icon>
+      </button>
+    </div>
+    <app-users-table></app-users-table>
+  </mat-sidenav-content>
+</mat-sidenav-container>
